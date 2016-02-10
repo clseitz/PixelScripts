@@ -9,7 +9,8 @@ tbm = 'TBM08c'
 roc = 'digv21respin'
 
 ###### Define your tests and temperature (extended pretest with pixel alive map)
-tests = ['Pretest_p17','Fulltest_m20','Cycle','Fulltest_m20','Fulltest_p17','IV_p17']
+tests = ['Pretest_p17','Fulltest_m20','Cycle','Fulltest_m20','IV_m20','Fulltest_p17','IV_p17']
+#tests = ['Pretest_p17_prod12','Timingtest_p17_prod12','Fulltest_p17_prod12','Pretest_p17_prod11','Timingtest_p17_prod11','Fulltest_p17_prod11']
 #Official sequence, not ours
 #tests = ['Fulltest_m20','Cycle','Fulltest_m20','IV_m20','Fulltest_p17','IV_p17']
 temps = ['17','-25']

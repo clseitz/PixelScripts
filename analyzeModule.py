@@ -330,15 +330,17 @@ if __name__ == "__main__":
             os.stat(outdir + "/"+modName)
         except:
             os.mkdir(outdir + "/"+modName)
-            
+        print fileName
+        if 'Timing' in fileName:
+            continue
         if not "IV" in fileName:
             PixelAlive(tfile, testName, modName)
             BB2(tfile, testName, modName)
-            if "Fulltest" in fileName:
-                #BB2(tfile, testName, modName)
+            if "Fulltest" in fileName:   
+                BB2(tfile, testName, modName)
                 Trim(tfile, testName, modName)
                 PhHeighOpt(tfile, testName, modName)
-        if "IV" in fileName:
+        elif "IV" in fileName:
             ivFileName = fileName.replace("pxar.root","ivCurve.log")
             ivFile = open(ivFileName, 'r')
             IVCurve(ivFile, testName,modName)
