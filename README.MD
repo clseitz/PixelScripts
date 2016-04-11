@@ -5,7 +5,8 @@
 * You will probaby need sudo rights on the mashine (doesn't work on the NAF)
 * Make sure Python >= 2.7 is installed
 
-```pip install --upgrade oauth2client
+```
+pip install --upgrade oauth2client
 pip install PyOpenSSL
 git clone https://github.com/burnash/gspread.git
 git clone https://github.com/clseitz/PixelScripts.git
