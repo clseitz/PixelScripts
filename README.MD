@@ -14,3 +14,9 @@ cd PixelScripts
 scp YOURUSERNAME@nafhh-cms05.desy.de:/nfs/dust/cms/user/clseitz/PixelTestbeam/gspread/gspread-test.json .
 python ReadCMSPixeSheet.py 
 ```
+The outputfile produced can be read in with the tele-scope package.
+For the gain files and the data acess create (or use softlinks) directories of the format:
+```
+calibrations/chipNUM/
+data/RAWFILES
+```
