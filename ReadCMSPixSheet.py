@@ -12,7 +12,7 @@ def getSheet():
     scope = ['https://spreadsheets.google.com/feeds']
     credentials = ServiceAccountCredentials.from_json_keyfile_name('gspread-test.json', scope)
     gc = gspread.authorize(credentials)
-    sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1ND6pXnsABj_ycDaC0xCGMejJmGoeUXVcX3XmwmlR5O0/edit#gid=0').sheet1
+    sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1W6qWHNanVM5SdUNaChfGVxdaGxb56xMxQIBOchOFdxs/edit#gid=0').sheet1
     return sheet
 
 
@@ -46,7 +46,7 @@ def getLocalSettings(setups):
 def getAllRuns(runs):
     AllRuns = []
     for run in runs:
-        cells = rl.range(rl.get_addr_int(run.row, run.col + 3)+":"+rl.get_addr_int(run.row, run.col + 4))
+        cells = rl.range(rl.get_addr_int(run.row, run.col + 4)+":"+rl.get_addr_int(run.row, run.col + 5))
         cells = list(x.value for x in cells)
         cells.append(int(run.row))
         r = cmsrun(cells)
