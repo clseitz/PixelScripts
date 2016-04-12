@@ -46,7 +46,7 @@ def getLocalSettings(setups):
 def getAllRuns(runs):
     AllRuns = []
     for run in runs:
-        cells = rl.range(rl.get_addr_int(run.row, run.col + 4)+":"+rl.get_addr_int(run.row, run.col + 5))
+        cells = rl.range(rl.get_addr_int(run.row, run.col + 3)+":"+rl.get_addr_int(run.row, run.col + 4))
         cells = list(x.value for x in cells)
         cells.append(int(run.row))
         r = cmsrun(cells)
@@ -104,9 +104,9 @@ class localSettings:
         self.row = row
     def __repr__(self):
         if 'gain' in self.setting: 
-            return "%s calibrations/chip%s/%s" % ( self.setting, self.value[1:4], self.value)
+            return "\n%s calibrations/chip%s/%s" % ( self.setting, self.value[1:4], self.value)
         else:
-            return "%s %s" % ( self.setting, self.value)
+            return "\n%s %s" % ( self.setting, self.value)
 
 class cmsrun:
 
@@ -117,7 +117,7 @@ class cmsrun:
 
     def __repr__(self):
         if self.tilt is not "":
-            return "tilt %s\nrun %s \n" % ( self.tilt, self.runnumber)
+            return "\ntilt %s\nrun %s" % ( self.tilt, self.runnumber)
         else:
             return "run %s" % ( self.runnumber)
 
