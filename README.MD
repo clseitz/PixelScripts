@@ -15,7 +15,7 @@ scp YOURUSERNAME@nafhh-cms05.desy.de:/nfs/dust/cms/user/clseitz/PixelTestbeam/gs
 python ReadCMSPixeSheet.py 
 ```
 The outputfile produced can be read in with the tele-scope package.
-For the gain files and the data acess create (or use softlinks) directories of the format:
+For the gain files and the data access create (or use softlinks) directories of the format:
 ```
 calibrations/chipNUM/
 data/run*.RAW
