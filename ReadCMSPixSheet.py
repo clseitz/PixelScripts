@@ -67,7 +67,7 @@ class globalSettings:
         self.row = row
 
     def __repr__(self):
-        return "chip %s\nrefchip %s\ngeo %s\ngain %s\nrefgain %s\nGeV %s\n" % ( self.chip, self.refchip, self.geo, self.gain, self.refgain, self.gev)
+        return "\nchip %s\nrefchip %s\ngeo %s\ngain %s\nrefgain %s\nGeV %s\n" % ( self.chip, self.refchip, self.geo, self.gain, self.refgain, self.gev)
 
     def createGeoFile(self,geo):
 
