@@ -2,8 +2,8 @@
 
 
 ## prerequisites:
-* You will probaby need sudo rights on the mashine (doesn't work on the NAF)
-* Make sure Python >= 2.7 is installed
+* You will probaby need sudo rights on the maschine (doesn't work on the NAF)
+* Make sure Python >= 2.7 is installed  (check with python --version)
 
 ```
 pip install --upgrade oauth2client
