@@ -48,6 +48,14 @@ npixelx 1152
 npixely  576
 zpos ZPOS5
 
+plane 6  # MOD
+type psi46digv2p1respin
+sizex 64.8
+sizey 16.2
+npixelx 432
+npixely 162
+zpos 75 # relative to plane 4
+
 plane 7  # DUT
 type psi46digv2p1respin
 sizex 7.8
