@@ -2,8 +2,8 @@
 
 
 ## prerequisites:
-* You will probaby need sudo rights on the mashine (doesn't work on the NAF)
-* Make sure Python >= 2.7 is installed
+* You will probaby need sudo rights on the maschine (doesn't work on the NAF)
+* Make sure Python >= 2.7 is installed  (check with python --version)
 
 ```
 pip install --upgrade oauth2client
@@ -13,4 +13,10 @@ git clone https://github.com/clseitz/PixelScripts.git
 cd PixelScripts
 scp YOURUSERNAME@nafhh-cms05.desy.de:/nfs/dust/cms/user/clseitz/PixelTestbeam/gspread/gspread-test.json .
 python ReadCMSPixeSheet.py 
+```
+The outputfile produced can be read in with the tele-scope package.
+For the gain files and the data access create (or use softlinks) directories of the format:
+```
+calibrations/chipNUM/
+data/run*.RAW
 ```
