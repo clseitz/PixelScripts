@@ -12,7 +12,7 @@ def getSheet():
     scope = ['https://spreadsheets.google.com/feeds']
     credentials = ServiceAccountCredentials.from_json_keyfile_name('gspread-test.json', scope)
     gc = gspread.authorize(credentials)
-    sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1W6qWHNanVM5SdUNaChfGVxdaGxb56xMxQIBOchOFdxs/edit#gid=0').sheet1
+    sheet = gc.open_by_url('https://docs.google.com/spreadsheets/d/1xc7pZBfNwF1VRmnEr-IGaT7nDnJNE03y77gmejgzxKU/edit#gid=0').sheet1
     return sheet
 
 
@@ -128,7 +128,7 @@ if __name__ == "__main__":
 
     GlobalSettings = getGlobalSettings( rl.findall("Global") )
     LocalSettings = getLocalSettings( rl.findall("Local") )
-    allRuns = getAllRuns(rl.findall("#"))
+    allRuns = getAllRuns(rl.findall("*"))
 
     all = GlobalSettings + LocalSettings + allRuns 
     dictAll = {}
